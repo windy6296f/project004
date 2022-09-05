@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(90deg, rgb(218, 147, 159), rgb(244, 211, 110));
+}
+
+header {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    color: white;
+    font-size: 3rem;
+  }
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  input,
+  button {
+    border: none;
+    padding: 0.25rem 0.5rem;
+    font-size: 1.75rem;
+    margin: 0.1rem;
+  }
+  input[type="number"] {
+    width: 50px;
+    text-align: center;
+  }
+  //   (從W3S複製) How TO - Hide Arrows From Input Number
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  button {
+    cursor: pointer;
+    background-color: rgba(173, 153, 113, 0.8);
+    color: white;
+  }
+  button.active:hover {
+    background-color: rgba(220, 220, 220, 0.8);
+  }
+}
+
+div.sort {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0rem;
+
+  button {
+    cursor: pointer;
+    background-color: rgba(90, 89, 89, 0.8);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    padding: 0.25rem 0.5rem;
+  }
+  button.active:hover {
+    background-color: rgba(220, 220, 220, 0.8);
+  }
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  div.todo {
+    display: flex;
+    margin: 0.2rem 0rem;
+    width: 30vw;
+
+    transition: all 0.2s ease;
+
+    p {
+      background-color: white;
+      color: black;
+      padding: 0.25rem 0.5rem;
+      font-size: 1.75rem;
+    }
+    p.todo-text {
+      width: 50%;
+    }
+    p.todo-time {
+      width: 20%;
+      text-align: center;
+    }
+    button {
+      padding: 0.25rem 0.75rem;
+      border: none;
+      cursor: pointer;
+      img {
+        width: 1.5vw;
+        pointer-events: none;
+      }
+    }
+    button.complete {
+      background-color: rgba(108, 156, 138, 0.8);
+      margin: 0rem 0.2rem;
+    }
+    button.trashcan {
+      background-color: rgba(122, 137, 183, 0.8);
+    }
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.done {
+  opacity: 0.5;
+  text-decoration: line-through;
+  text-decoration-thickness: 0.1rem;
+}
+
+@keyframes scaleDown {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
